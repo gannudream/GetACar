@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>BuyerSignup</title>
+<style>
+table
+	{
+	margin-top:4%;
+	margin-left:30%;
+	background:lightgreen;
+	padding:20px;
+	border-radius:10px;
+	}
+img
+	{
+	width:90px;
+	height:80px;
+	margin-top:-50%;
+	margin-left:70%;
+	}
+input
+	{
+	border-style:none;
+	padding:12px;
+	font-size:18px;
+	background:lightgreen;
+	}
+a
+	{
+	text-decoration:none;
+	margin-left:50%;	
+	}
+button
+	{
+	margin-top:5%;
+	margin-left:13%;
+	}
+</style>
+<script>
+function valid()
+	{
+	var password=document.myform.password.value;
+	var cpassword=document.myform.cpassword.value;
+	if(password!=cpassword)
+		{
+		alert("password doesn't match!!");
+		return false;
+		}
+	}
+</script>
+</head>
+<body>
+<table>
+<form name="myform" action="bsignup.php" method="post" onsubmit="return valid()" enctype="multipart/form-data">
+<thead>
+	<td></td>
+	<td><img id="car" src="img/carlogo2.png"></td>
+</thead>
+<tr>
+	<td>Mail-id:</td>
+	<td><input type="mail" name="mailid" placeholder="enter your mail id" maxlength="30" required></td>
+</tr>
+<tr>
+	<td>UserName:</td>
+	<td><input type="text" name="username" placeholder="enter your username" maxlength="10" pattern="[A-Z,a-z,0-9,!@#$%^&*]{6}" required></td>
+</tr>
+<tr>
+	<td>Password:</td>
+	<td><input type="password" name="password" placeholder="enter your password" maxlength="10" pattern="[A-Z,a-z,0-9,!@#$%^&*]{8}" required></td>
+</tr>
+<tr>
+	<td>Confirm Password:</td>
+	<td><input type="password" name="cpassword" placeholder="confirm your password" maxlength="10" required></td>
+</tr>
+<tr>
+	<td>Mobile Number:</td>
+	<td><input type="tel" name="mobilenum" placeholder="enter your mobile number" maxlength="10" pattern="[0-9]{10}" required></td>
+</tr>
+<tr>
+	<td>Profile Picture:</td>
+	<td><input type="file" name="profilepicture" required></td>
+</tr>
+<tr>
+	<td></td>
+	<td><button>submit</button></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
