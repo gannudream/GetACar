@@ -1,5 +1,5 @@
 <?php
-$mail=$_POST['mailid'];
+$mail=$_POST['mailidapoor'];
 $uname=$_POST['username'];
 $pword=$_POST['password'];
 $cpassword=$_POST['cpassword'];
